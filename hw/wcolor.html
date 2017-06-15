@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+           
+<style>
+body{margin:0; padding:0}
+#gotop {
+    display: none;
+    position: fixed;
+    right: 40px;
+	opacity:0.8;
+    bottom: 40px;    
+    padding: 5px 5px;    
+    font-size: 16px;
+	text-align:center;
+    background: #0078b6;
+	font-family:微軟正黑體;
+    color: white;
+    cursor: pointer;
+}
+.top {min-height: 850px;}
+.top-bg-img {margin:0 0 0 0; width:100%;}
+.text .top{	
+	font-size:9em;
+	color:#FFFFFF;
+	font-family:Roboto thin;	
+	text-shadow:1px 1px 1px #8A8A8A;	}
+.text .a{position: absolute;left: 10%;top: 5%; opacity:0.3}
+.text .a1{position: absolute;left: 10%;top: 25%; opacity:0.3}
+.text .a2{position: absolute;left: 10%;top: 45%; opacity:0.3}
+.text .a3{position: absolute;left: 10%;top: 65%; opacity:0.3}
+.text .b{	
+	font-size:100pt;
+	color:#FFFFFF;
+	font-family:Roboto Black;
+	line-height:100pt;
+	position: absolute;
+	left: 58%;
+	top: 60%;
+	text-align:right;
+	width: 280px;
+	text-shadow:1px 1px 1px #8A8A8A;
+}
+.text .c{	
+	font-size:50pt;
+	font-weight:bold;
+	color:#FFFFFF;
+	font-family:微軟正黑體;
+	line-height:100pt;
+	position: absolute;
+	left: 58%;top: 45%;
+text-shadow:1px 1px 1px #8A8A8A;
+}
+
+
+.pic{width:100%; height:0; padding-bottom:18%;  margin-top:30px; margin-bottom:30px; text-align:center;overflow: hidden;}
+.pic img{ display: inline-block; float:left;  vertical-align: top; width:25%; broder:0;}
+
+
+.figure img {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.figure:hover img {
+	-webkit-transform: scale(1.2);
+	transform: scale(1.2);
+}
+
+
+
+
+
+.div1 {width:100%; height: 0; padding-bottom: 78.229167%; background-image:url(paper_1.jpg); background-repeat:no-repeat;  background-size:100%;  position: relative;    }
+.div1 .a{font-size: 75pt; line-height: 75pt;  color: #fff; position: absolute;left: 15%;top: 8%; font-family:Roboto Black; }
+.div1 .b{font-size: 40pt; line-height: 50pt;  color: #fff; position: absolute;left: 15%;top: 17%; font-weight:bold;  font-family:微軟正黑體;}
+.div1 .c{font-size: 20pt; line-height: 35pt;  color: #fff; position: absolute;left: 15%;top: 22%; font-family:微軟正黑體;}
+.div1 .d{font-size: 1em; line-height: 1em;position: absolute;}
+
+.div2 {width:100%; height: 0; padding-bottom: 78.229167%; background-image:url(paper_2.jpg); background-repeat:no-repeat;  background-size:100%;  position: relative;     }
+.div2 .a{font-size: 75pt; line-height: 76pt;  color: #fff; position: absolute;left: 15%;top: 10%; font-family:Roboto Black; }
+.div2 .b{font-size: 40pt; line-height: 50pt;  color: #fff; position: absolute;left: 15%;top: 19%; font-weight:bold;  font-family:微軟正黑體;}
+.div2 .c{font-size: 20pt; line-height: 35pt;  color: #fff; position: absolute;left: 15%;top: 24%; font-family:微軟正黑體;}
+.div2 .d{font-size: 1em; line-height: 1em;position: absolute;}
+
+
+.div3 {width:100%; height: 0; padding-bottom: 78.229167%; background-image:url(paper_3.jpg); background-repeat:no-repeat;  background-size:100%;  position: relative;     }
+.div3 .a{font-size: 75pt; line-height: 76pt;  color: #fff; position: absolute;left: 15%;top: 13%; font-family:Roboto Black; }
+.div3 .b{font-size: 40pt; line-height: 50pt;  color: #fff; position: absolute;left: 15%;top: 22%; font-weight:bold;  font-family:微軟正黑體;}
+.div3 .c{font-size: 20pt; line-height: 35pt;  color: #fff; position: absolute;left: 15%;top: 27%; font-family:微軟正黑體;}
+.div3 .d{font-size: 1em; line-height: 1em;position: absolute;}
+
+.div4 {width:100%; height: 0; padding-bottom: 79.427083%; background-image:url(paper_4.jpg); background-repeat:no-repeat;  background-size:100%;  position: relative;     }
+.div4 .a{font-size: 75pt; line-height: 76pt;  color: #fff; position: absolute;left: 15%;top: 11%; font-family:Roboto Black; }
+.div4 .b{font-size: 40pt; line-height: 50pt;  color: #fff; position: absolute;left: 15%;top: 20%; font-weight:bold;  font-family:微軟正黑體;}
+.div4 .c{font-size: 20pt; line-height: 35pt;  color: #fff; position: absolute;left: 15%;top: 25%; font-family:微軟正黑體;}
+.div4 .d{font-size: 1em; line-height: 1em;position: absolute;}
+
+.pro{margin:0 0 0 0 !important; padding:30% 0 5% 0 !important; float:center;clear:left; width:55%; margin:0; padding:0; font-family:微軟正黑體; }
+.prod{width:33%; float:left; text-align:center; margin:10px 0 10px 0; }
+.prod img{width:80%; margin:10px 0 10px 0;}
+.prod p{line-height:24px; font-size:16px; margin:0; color:#353535;}
+.imag2{display:none;}
+.prod:hover .imag1{display:none;}
+.prod:hover .imag2{display:block;}
+.price{font-size:18px !important; font-weight:bold !important;  margin:0 0 0 8px; color:#0078b6}
+.cross-price{text-decoration:line-through; color:#E94043 !important;}
+
+
+/****store-link****/
+.store-link{font-family:微軟正黑體;clear:left; font-size:18px; line-height:30px; width:100%; margin:0 0px 0 0px; height:250px; background:#BFC8C8; text-align:center; padding:0px 0 0 0; clear:left;}
+.store-link td{ color:#333;}
+.store-link a{ text-decoration:none; transition:.2s; color:#333;}
+.store-link a:hover{color:#F60;}
+
+.fblink{margin:20px 180px 20px 0px;  z-index: 999;}
+</style>
+
+
+
+<div class="text">
+<div class="top-bg"><img class="top-bg-img" alt="" src="wcolor__1.jpg" /></div>
+<span class="top a">2</span>
+<span class="top a1">0</span>
+<span class="top a2">1</span>
+<span class="top a3">7</span>
+<span class="b">WOMEN<br>RUN</span>
+<span class="c">女款春夏跑服穿搭</span>
+</div>
+
+
+
+
+<div class="pic">
+<span class="figure" id="pink"><img src="look4.jpg" width="25%"></img></span>
+<span class="figure" id="peach"><img src="look2.jpg" width="25%"></img></span>
+<span class="figure" id="blue"><img src="look1.jpg" width="25%"></img></span>
+<span class="figure" id="green"><img src="look3.jpg" width="25%"></img></span>
+</div>
+
+
+<center><div class="div1" >
+
+<span class="a" id="one">LOOK1</span>
+<span class="b">#粉色系</span>
+<span class="c">以既柔軟又堅強的態度面對一切挑戰</span>
+<!--pro -->
+<div class="pro">
+<div class="detail">
+<table>
+<tbody>
+<tr>
+<td>
+<div class="prod"><a href="{{store direct_url='running-c121260.html#model=8380666'}}"><img alt="" src="19.png" /></a>
+<p>女款柔軟排汗跑步T恤</p>
+<p>NT$<span class="price">349</span></p>
+</div>
+<!--prod end-->
+<div class="prod"><a href="{{store direct_url='running-c122628.html#model=8381587'}}"><img alt="" src="20.png" /></a>
+<p>女款輕柔透氣跑步緊身九分褲</p>
+<p>NT$<span class="price">449</span></p>
+</div>
+<!--prod end-->
+<div class="prod"><a href="{{store direct_url='running-c116640.html#model=8368486'}}"><img alt="" src="21.png" /></a>
+<p>女款輕量透氣防潑水風衣</p>
+<p>NT$<span class="price">399</span></p>
+</div>
+<!--prod end-->
+<div class="prod"><a href="{{store direct_url='running-c113011.html#model=8329214'}}"><img alt="" src="22.png" /></a>
+<p>透氣舒適跑步運動內衣(無襯)</p>
+<p>NT$<span class="price">149</span></p>
+</div>
+<!--prod end-->
+<div class="prod"><a href="{{store direct_url='running-c117108.html#model=8380013'}}"><img alt="" src="23.png" /></a>
+<p>女款緩震靈活跑步鞋</p>
+<p>NT$<span class="price">749</span></p>
+</div>
+<!--prod end-->
+<div class="prod"><a href="{{store direct_url='running-c121005.html#model=8382137'}}"><img alt="" src="24.png" /></a>
+<p>附耳機夾跑步手機握套</p>
+<p>NT$<span class="price">99</span></p>
+</div>
+<!--prod end-->
+<!--prod end-->
+<!--prod end--></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!--pro end-->
+</div></center>
+
+
+
+<center><div class="div2" >
+
+<span class="a" id="two"><i>LOOK2</i></span>
+<span class="b">#桃色系</span>
+<span class="c">成熟女人的魅力來自永不放棄的毅力</span>
+
+<!--pro -->
+<div class="pro">
+<div class="detail">
+<table>
+<tbody>
+<tr>
+<td>
+<div class="prod"><a href="{{store direct_url='running-c121261.html#model=8380675'}}"><img alt="" src="7.png" /></a>
+<p>女款柔軟舒適跑步背心</p>
+<p>NT$<span class="price">299</span></p>
+</div>
+<!--prod end-->
+<div class="prod"><a href="{{store direct_url='running-c117106.html#model=8381945'}}"><img alt="" src="8.png" /></a>
+<p>女款彈性伸縮跑步短褲</p>
+<p>NT$<span class="price">349</span></p>
+</div>
+<!--prod end-->
+<div class="prod"><a href="{{store direct_url='running-c117141.html#model=8380901'}}"><img alt="" src="9.png" /></a>
+<p>支撐塑形無縫跑步運動內衣</p>
+<p>NT$<span class="price">499</span></p>
+</div>
+<!--prod end-->
+<div class="prod"><a href="{{store direct_url='running-c117108.html#model=8380012'}}"><img alt="" src="10.png" /></a>
+<p>女款緩震靈活跑步鞋</p>
+<p>NT$<span class="price">749</span></p>
+</div>
+<!--prod end-->
+<div class="prod"><a href="{{store direct_url='running-c122863.html#model=8368943'}}"><img alt="" src="11.png" /></a>
+<p>L號跑步智慧型手機臂套</p>
+<p>NT$<span class="price">249</span></p>
+</div>
+<!--prod end-->
+<div class="prod"><a href="{{store direct_url='running-c50806.html'}}"><img alt="" src="12.png" /></a>
+<p>多功能跑步頭巾脖圍</p>
+<p>NT$<span class="price">79</span></p>
+</div>
+<!--prod end-->
+<!--prod end-->
+<!--prod end--></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!--pro end-->
+</div></center>
+
+<center><div class="div3" >
+<span class="a" id="three"><i>LOOK3</i></span>
+<span class="b">#藍色系</span>
+<span class="c">在奔跑中釋放熱愛自由的靈魂</span>
+
+
+<!--pro -->
+<div class="pro">
+<div class="detail">
+<table>
+<tbody>
+<tr>
+<td>
+<div class="prod"><a href="{{store direct_url='running-c113011.html#model=8327281'}}"><img alt="" src="1.png" /></a>
+<p>透氣舒適跑步運動內衣(無襯)</p>
+<p>NT$<span class="price">149</span></p>
+</div>
+<!--prod end-->
+<div class="prod"><a href="{{store direct_url='running-c121260.html#model=8381590'}}"><img alt="" src="2.png" /></a>
+<p>女款柔軟排汗跑步T恤</p>
+<p>NT$<span class="price">349</span></p>
+</div>
+<!--prod end-->
+<div class="prod"><a href="{{store direct_url='running-c116641.html#model=8370294'}}"><img alt="" src="3.png" /></a>
+<p>女款快乾透氣跑步緊身褲</p>
+<p>NT$<span class="price">399</span></p>
+</div>
+<!--prod end-->
+<div class="prod"><a href="{{store direct_url='running-c117108.html#model=8380026'}}"><img alt="" src="4.png" /></a>
+<p>女款緩震靈活跑步鞋</p>
+<p>NT$<span class="price">749</span></p>
+</div>
+<!--prod end-->
+<div class="prod"><a href="{{store direct_url='running-c72772.html#model=8385043'}}"><img alt="" src="5.png" /></a>
+<p>可放鑰匙跑步運動手腕包</p>
+<p>NT$<span class="price">79</span></p>
+</div>
+<!--prod end-->
+<div class="prod"><a href="{{store direct_url='running-c104739.html#model=8297581'}}"><img alt="" src="6.png" /></a>
+<p>多隔層手機收納跑步腰包</p>
+<p>NT$<span class="price">149</span></p>
+</div>
+<!--prod end-->
+<!--prod end-->
+<!--prod end--></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!--pro end-->
+</div></center>
+
+<center><div class="div4" >
+<span class="a" id="four"><i>LOOK4</i></span>
+<span class="b">#藍綠色系</span>
+<span class="c">用平穩的步伐找到屬於自己的節奏</span>
+
+<!--pro -->
+<div class="pro">
+<div class="detail">
+<table>
+<tbody>
+<tr>
+<td>
+<div class="prod"><a href="{{store direct_url='running-c113405.html#model=8380683'}}"><img alt="" src="13.png" /></a>
+<p>女款柔軟排汗反光夜跑T恤</p>
+<p>NT$<span class="price">499</span></p>
+</div>
+<!--prod end-->
+<div class="prod"><a href="{{store direct_url='running-c117102.html#model=8380674'}}"><img alt="" src="14.png" /></a>
+<p>女款無縫剪裁跑步緊身七分褲</p>
+<p>NT$<span class="price">399</span></p>
+</div>
+<!--prod end-->
+<div class="prod"><a href="{{store direct_url='running-c117143.html#model=8380908'}}"><img alt="" src="15.png" /></a>
+<p>支撐透氣無縫跑步運動內衣</p>
+<p>NT$<span class="price">499</span></p>
+</div>
+<!--prod end-->
+<div class="prod"><a href="{{store direct_url='running-c107979.html#model=8380028'}}"><img alt="" src="16.png" /></a>
+<p>女款緩震加強跑步鞋</p>
+<p>NT$<span class="price">1499</span></p>
+</div>
+<!--prod end-->
+<div class="prod"><a href="{{store direct_url='running-c112576.html#model=8352142'}}"><img alt="" src="17.png" /></a>
+<p>觸控式跑步智慧型手機臂套</p>
+<p>NT$<span class="price">199</span></p>
+</div>
+<!--prod end-->
+<div class="prod"><a href="{{store direct_url='running-c72772.html#model=8382134'}}"><img alt="" src="18.png" /></a>
+<p>可放鑰匙跑步運動手腕包</p>
+<p>NT$<span class="price">79</span></p>
+</div>
+<!--prod end-->
+<!--prod end-->
+<!--prod end--></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!--pro end-->
+</div></center>
+
+<div class="store-link">
+   <table style="width:100%;">
+    <tr>
+     <td style="padding:40px; text-align:center; vertical-align:middle;"><img src="http://media.decathlon.tw/media/wysiwyg/find_store/local01.jpg" width="350px" /></td>
+     <td style="padding:40px; vertical-align:middle; text-align:center; line-height:30px;">
+門市資訊:<br /> <a target="_blank" href="http://www.decathlon.tw/zh/decathlon/store/detail/taiwan-neihu-store">台北內湖店</a> | <a target="_blank" href="http://www.decathlon.tw/zh/decathlon/store/detail/taiwan-zhonghe-store">新北中和店</a> | <a target="_blank" href="http://www.decathlon.tw/zh/decathlon/store/detail/taiwan-zhongli-store">桃園中壢店</a> | <a target="_blank" href="http://www.decathlon.tw/zh/decathlon/store/detail/taibei-bade-store">桃園八德店</a> <br /><a target="_blank" href="http://www.decathlon.tw/zh/decathlon/store/detail/taiwan-nantun-store">台中南屯店</a> | <a target="_blank" href="http://www.decathlon.tw/zh/decathlon/store/detail/taiwan-ximen-store">台南西門店</a> | <a target="_blank" href="http://www.decathlon.tw/zh/decathlon/store/detail/taiwan-rende-store">台南仁德店</a> | <a target="_blank" href="http://www.decathlon.tw/zh/decathlon/store/detail/taiwan-fengshan-store">高雄鳳山店</a> | <a target="_blank" href="http://www.decathlon.tw/zh/decathlon/store/detail/taiwan-pingtung-store">屏東店</a>
+     </td>
+    </tr>
+</table>
+</div>
+<!--Share button-->
+<div style="margin-top: -50px;position: absolute;z-index: 999;right: 320px;">
+<div class="fb-like" data-href="http://www.decathlon.tw/zh/summer-hike17" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true">&nbsp;</div>
+</div>
+
+<div id="gotop">▲<br>回首頁</div>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script type="text/javascript">
+       $('#blue').click(function(){ $('html,body').animate({scrollTop:$('#three').offset().top}, 800); }); //代表一個完整的執行區塊
+	    $('#peach').click(function(){ $('html,body').animate({scrollTop:$('#two').offset().top}, 800); });
+		 $('#green').click(function(){ $('html,body').animate({scrollTop:$('#four').offset().top}, 800); });
+		  $('#pink').click(function(){ $('html,body').animate({scrollTop:$('#one').offset().top}, 800); });
+
+
+$(function(){
+    $("#gotop").click(function(){
+        jQuery("html,body").animate({
+            scrollTop:0
+        },1000);
+    });
+    $(window).scroll(function() {
+        if ( $(this).scrollTop() > 300){
+            $('#gotop').fadeIn("fast");
+        } else {
+            $('#gotop').stop().fadeOut("fast");
+        }
+    });
+});
+</script>
+
+ </body>
+</html>

@@ -1,0 +1,97 @@
+	
+	
+	<style>
+body{margin:0; padding:0}
+
+h2 span {
+	margin-left: 1em;
+	color: #aaa;
+	font-size: 100%;
+}
+.column::after {
+	content: '';
+	clear: both;
+	display: block;
+}
+.column div {
+	position: relative;
+	float: left;
+	width: 25%;
+	margin: 0 0 0 0px;
+	padding: 0;
+}
+.column div:first-child {
+	margin-left: 0;
+}
+.column img{height:45%}
+.column div span {
+	position: absolute;
+	bottom: -20px;
+	left: 30px;
+	z-index: 1;
+	display: block;
+	margin: 0;
+	padding: 0;
+	color: #444;
+	font-size: 18px;
+	text-decoration: none;
+	text-align: center;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+	opacity: 0;
+}
+figure {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	left: 0;
+	overflow: hidden;
+}
+figure:hover+span {
+	bottom: 20px;
+	opacity: 1;
+}
+
+
+
+/* Zoom In #1 */
+.hover01 figure img {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.hover01 figure:hover img {
+	-webkit-transform: scale(1.2);
+	transform: scale(1.2);
+}
+
+</style>
+	
+	
+	
+	
+	
+	
+	
+	
+
+	<h2 id="demo01">1. Zoom In #1</h2>
+	<div class="hover01 column">
+		<div>
+			<figure><img src="look1.jpg" /></figure>
+			<span>Hover</span>
+		</div>
+		<div>
+			<figure><img src="look2.jpg" /></figure>
+			<span>Hover</span>
+		</div>
+		<div>
+			<figure><img src="look3.jpg" /></figure>
+			<span>Hover</span>
+		</div>
+		<div>
+			<figure><img src="look4.jpg" /></figure>
+			<span>Hover</span>
+		</div>
+	</div>
